@@ -19,15 +19,30 @@
     <!-- section with select option -->
     <div class="select">
         <h3>Choose</h3>
-        <img src="assets/images/paper.jpg" alt="paper" title="paper">
-        <img src="assets/images/rock.jpg" alt="rock" title="rock">
-        <img src="assets/images/scissors.jpg" alt="scissors" title="scissors">
+        <img data-option="paper" src="assets/images/paper.jpg" alt="paper" title="Paper">
+        <img data-option="rock" src="assets/images/rock.jpg" alt="rock" title="Rock">
+        <img data-option="scissors" src="assets/images/scissors.jpg" alt="scissors" title="Scissors">
     </div>
 
     <!-- start game button -->
     <button class="start">Let's play!</button>
 
-    
+    <!-- every game results section -->
+    <div class="panel-left">
+        <h3>Results</h3>
+        <p>Your choice: <span data-summary="your-choice"></span></p>
+        <p>Computers choice: <span data-summary="ai-choice"></span></p>
+        <h2>Winner: <span data-summary="who-win"></span></h2>
+      </div>
+  
+      <!-- total game result section -->
+      <div class="panel-right">
+        <h3>Current scores</h3>
+        <p class="numbers">numbers game: <span>0</span></p>
+        <p class="wins">wins: <span>0</span></p>
+        <p class="losses">losings: <span>0</span></p>
+        <p class="draws">draws: <span>0</span></p>
+      </div>
     
 
 
