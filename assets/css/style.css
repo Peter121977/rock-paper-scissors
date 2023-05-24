@@ -57,3 +57,27 @@
     margin: 20px;
     display: inline-block;
   }
+
+  /* --------- Button */
+
+  button {
+    display: block;
+    padding: 7px 25px;
+    border: 1.5px solid black;
+    text-transform: uppercase;
+    background-color: lightblue;
+    font-weight: bold;
+    margin: 10px auto;
+    transition: 0.2s;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: black;
+    color: grey;
+  }
+  
+  span {
+    font-weight: bold;
+  }
