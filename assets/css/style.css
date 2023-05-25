@@ -81,3 +81,11 @@
   span {
     font-weight: bold;
   }
+
+  /* style for media */
+  @media (max-width: 640px) {
+    .panel-left, .panel-right {
+        width: 100%;
+        display: block;
+    }
+  }
