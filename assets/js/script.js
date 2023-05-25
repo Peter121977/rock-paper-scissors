@@ -25,6 +25,21 @@ const gameSummary = {
 function aiChoice() {
   return hands[Math.floor(Math.random() * 3)].dataset.option;
 }
+// result function who won
+function checkResult(player, ai) {
+  // console.log(player, ai);
+  if (player === ai) {
+    return "draw";
+  } else if (
+    (player === "paper" && ai === "rock") ||
+    (player === "rock" && ai === "scissors") ||
+    (player === "scissors" && ai === "paper")
+  ) {
+    return "win";
+  } else {
+    return "loss";
+  }
+}
 
 //start/control function
 function startGame() {
@@ -32,6 +47,8 @@ function startGame() {
     return alert("choose hand!!!!");
   }
   game.aiHand = aiChoice();
+  const gameResult = checkResult(game.playerHand, game.aiHand);
+  console.log(gameResult);
 }
   
   // set click listiner for everty hand
