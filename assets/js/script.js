@@ -63,6 +63,14 @@ function publishResult(player, ai, result) {
     document.querySelector('[data-summary="who-win"]').style.color = "gray";
   }
 }
+//end game function
+function endGame() {
+  document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow =
+    "";
+  game.playerHand = "";
+  game.aiHand = "";
+
+}
 
 //start/control function
 function startGame() {
@@ -73,6 +81,7 @@ function startGame() {
   const gameResult = checkResult(game.playerHand, game.aiHand);
   console.log(gameResult);
   publishResult(game.playerHand, game.aiHand, gameResult);
+  endGame();
 }
   
   // set click listiner for everty hand
