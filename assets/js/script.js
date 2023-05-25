@@ -21,6 +21,20 @@ const gameSummary = {
     hands.forEach((hand) => (hand.style.boxShadow = ""));
     this.style.boxShadow = "0 0 0 4px red";
   }
+  // computer choice function
+function aiChoice() {
+  return hands[Math.floor(Math.random() * 3)].dataset.option;
+}
+
+//start/control function
+function startGame() {
+  if (!game.playerHand) {
+    return alert("choose hand!!!!");
+  }
+  game.aiHand = aiChoice();
+}
   
   // set click listiner for everty hand
   hands.forEach((hand) => hand.addEventListener("click", handSelection));
+  //start game
+document.querySelector(".start").addEventListener("click", startGame);
